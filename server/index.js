@@ -1,9 +1,10 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const app = express();
-const port = 8000;
 
 dotenv.config();
+
+const port = process.env.port || 8000;
 
 const schoolRoute = require('./routes/school.route.js');
 const { connectDB } = require('./connection.js');
